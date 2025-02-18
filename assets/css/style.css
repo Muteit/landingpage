@@ -13,7 +13,7 @@
 
 body {
   color: var(--color-main);
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   line-height: 1.142857142857143;
   font-family: Roboto;
   background-color: var(--color-opposite);
@@ -44,7 +44,7 @@ h3 {
   margin-bottom: var(--size-3);
 }
 h6 {
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   font-weight: 700;
   margin-bottom: var(--size-2);
 }
