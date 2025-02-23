@@ -13,7 +13,7 @@
 
 body {
   color: var(--color-main);
-  font-size: 0.925rem;
+  font-size: 1rem;
   line-height: 1.142857142857143;
   font-family: Roboto;
   background-color: var(--color-opposite);
@@ -58,6 +58,19 @@ h6 small {
   position: relative;
 }
 
+.navigation {
+  font-size: 1rem;
+  padding-top: var(--size-3);
+  padding-bottom: var(--size-6);
+}
+.navigation a {
+  text-decoration: none;
+}
+.navigation {
+  display: flex;
+  gap: 24px;
+}
+
 .donation {
   font-size: 1rem;
   padding-top: var(--size-3);
@@ -67,9 +80,10 @@ h6 small {
   text-decoration: none;
 }
 
-.app-name {
-  font-size: 1rem;
-  margin-bottom: var(--size-2);
+.description {
+  font-size: 1.5rem;
+  margin-top: var(--size-2);
+  margin-bottom: var(--size-3);
   display: block;
 }
 
@@ -325,6 +339,16 @@ h6 small {
     padding-right: 32px;
   }
 
+  .navigation {
+    align-self: flex-start;
+    text-align: right;
+    padding-top: var(--size-4);
+    padding-bottom: 0;
+  }
+  .navigation br {
+    display: none;
+  }
+
   .donation {
     align-self: flex-start;
     text-align: right;
@@ -342,7 +366,7 @@ h6 small {
     left: -120px;
   }
 
-  .app-name {
+  .description {
     margin-bottom: var(--size-3);
   }
 
@@ -412,6 +436,10 @@ h6 small {
     position: absolute;
     top: 15px;
     left: 0;
+  }
+
+  .navigation {
+    flex-basis: 100%;
   }
 
   .donation {
