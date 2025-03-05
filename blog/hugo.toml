@@ -1,0 +1,26 @@
+baseURL = 'https://muteit.ru/blog/'
+languageCode = 'ru-ru'
+title = 'База знаний - MuteIt.ru'
+theme = 'PaperMod'
+
+[params]
+  description = "Статьи и материалы о парурезисе, его лечении и преодолении"
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+
+[params.homeInfoParams]
+  Title = "База знаний MuteIt"
+  Content = "Статьи и материалы о парурезисе, его лечении и преодолении"
+
+[[params.socialIcons]]
+  name = "telegram"
+  url = "https://t.me/muteit"
+
+[markup.goldmark.renderer]
+  unsafe = true

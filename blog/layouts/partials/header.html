@@ -1,0 +1,40 @@
+{{- /* theme-toggle is enabled */}}
+{{- if (not site.Params.disableThemeToggle) }}
+{{- /* theme is light */}}
+{{- if (eq site.Params.defaultTheme "light") }}
+{{- printf `<script>
+    if (localStorage.getItem("%s") !== "dark") {
+        document.body.classList.add('light');
+    }
+</script>` site.Params.defaultTheme | safeHTML }}
+{{- else }}
+{{- printf `<script>
+    if (localStorage.getItem("%s") === "dark") {
+        document.body.classList.add('dark');
+    }
+</script>` site.Params.defaultTheme | safeHTML }}
+{{- end }}
+{{- end }}
+
+<header class="header">
+    <nav class="navigation">
+        <a href="/">Проект</a>
+        <a href="/blog/">База знаний</a>
+        <a href="/start/">С чего начать</a>
+        <a href="/treatments/">Лечение</a>
+        <a href="/platform/">Платформа</a>
+    </nav>
+</header>
+
+{{- /* Main Menu */ -}}
+{{- if (not .IsHome) }}
+<header class="page-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }} 

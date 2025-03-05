@@ -1,0 +1,24 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+:root {
+    --theme: rgb(29, 30, 32);
+    --entry: rgb(46, 46, 51);
+    --primary: rgba(255, 255, 255, 0.8);
+    --secondary: rgba(255, 255, 255, 0.6);
+    --tertiary: rgba(255, 255, 255, 0.4);
+    --content: rgba(255, 255, 255, 0.8);
+    --border: rgb(51, 51, 51);
+}
+
+body {
+    background-color: var(--theme) !important;
+    color: var(--content) !important;
+}
+
+.post-content {
+    background-color: var(--entry) !important;
+}

@@ -1,0 +1,37 @@
+baseURL: "http://localhost"
+title: "Справляемся с парурезом"
+theme: "PaperMod"
+languageCode: "ru"
+defaultContentLanguage: "ru"
+
+params:
+  # Настройки темы
+  defaultTheme: "dark"
+  disableThemeToggle: true
+  
+  # Настройки отображения
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  
+  # Настройки ассетов
+  assets:
+    disableHLJS: true
+    css:
+      - css/common/custom.css
+
+menu:
+  main:
+    - identifier: "categories"
+      name: "Категории"
+      url: "/categories/"
+      weight: 10
+    - identifier: "tags"
+      name: "Теги"
+      url: "/tags/"
+      weight: 20
+    - identifier: "archives"
+      name: "Архив"
+      url: "/archives/"
+      weight: 30
