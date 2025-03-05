@@ -13,48 +13,93 @@
 
 body {
     font-family: Roboto, var(--sys-font-family), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--color-opposite);
+    color: var(--color-main);
 }
 
 .dark {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
+    --theme: rgb(0, 0, 0);
+    --entry: rgb(33, 33, 33);
     --primary: rgb(255, 255, 255);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
+    --secondary: rgb(166, 166, 166);
+    --tertiary: rgb(51, 51, 51);
     --content: rgb(196, 196, 197);
     --hljs-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
 }
 
+/* Typography */
+h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: var(--size-3);
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: var(--size-3);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 64px;
+        line-height: 84px;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
 /* Layout */
 .main {
     max-width: 1240px;
-    padding-left: 420px;
-    padding-right: 100px;
     margin: 0 auto;
+    padding: var(--size-4) var(--size-2);
+}
+
+@media (min-width: 992px) {
+    .main {
+        padding-left: 420px;
+        padding-right: 100px;
+    }
 }
 
 /* Navigation */
-.navigation {
+.top-navigation {
     font-size: 1rem;
-    padding-top: var(--size-3);
-    padding-bottom: var(--size-6);
+    padding: var(--size-3) var(--size-2);
     display: flex;
     gap: 24px;
     max-width: 1240px;
-    padding-left: 420px;
-    padding-right: 100px;
     margin: 0 auto;
 }
 
-.navigation a {
-    color: var(--primary);
+@media (min-width: 992px) {
+    .top-navigation {
+        padding-left: 420px;
+        padding-right: 100px;
+    }
+}
+
+.top-navigation a {
+    color: var(--color-main);
     text-decoration: none;
 }
 
-.navigation a:hover {
-    color: var(--secondary);
+.top-navigation a:hover {
+    color: var(--color-muted);
 }
 
 /* Content */
@@ -81,50 +126,71 @@ body {
     margin: var(--size-4) auto;
 }
 
-.post-preview {
+.post-entry {
     margin-bottom: var(--size-4);
     padding-bottom: var(--size-3);
     border-bottom: 1px solid var(--color-main-opacity);
+    background: transparent;
 }
 
-.post-preview:last-child {
+.post-entry:last-child {
     border-bottom: none;
 }
 
-.post-preview h2 {
+.entry-header h2 {
     margin-bottom: var(--size-1);
 }
 
-.post-preview h2 a {
-    color: var(--primary);
+.entry-header h2 a {
+    color: var(--color-main);
     text-decoration: none;
 }
 
-.post-preview h2 a:hover {
+.entry-header h2 a:hover {
     text-decoration: underline;
 }
 
-.post-preview p {
+.entry-content {
     margin-bottom: var(--size-2);
+    color: var(--color-muted);
 }
 
 /* Footer */
 .footer {
     margin-top: var(--size-6);
-    padding-bottom: var(--size-4);
+    padding: var(--size-4) var(--size-2);
     max-width: 1240px;
-    padding-left: 420px;
-    padding-right: 100px;
     margin: var(--size-6) auto var(--size-4);
 }
 
+@media (min-width: 992px) {
+    .footer {
+        padding-left: 420px;
+        padding-right: 100px;
+    }
+}
+
 .footer a {
-    color: var(--secondary);
+    color: var(--color-muted);
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: var(--primary);
+    color: var(--color-main);
+}
+
+/* Theme toggle */
+#theme-toggle {
+    color: var(--color-main);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 /* Telegram integration */
