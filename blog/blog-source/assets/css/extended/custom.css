@@ -27,12 +27,25 @@ body {
     --border: rgb(51, 51, 51);
 }
 
+/* Layout */
+.main {
+    max-width: 1240px;
+    padding-left: 420px;
+    padding-right: 100px;
+    margin: 0 auto;
+}
+
+/* Navigation */
 .navigation {
     font-size: 1rem;
     padding-top: var(--size-3);
     padding-bottom: var(--size-6);
     display: flex;
     gap: 24px;
+    max-width: 1240px;
+    padding-left: 420px;
+    padding-right: 100px;
+    margin: 0 auto;
 }
 
 .navigation a {
@@ -44,20 +57,65 @@ body {
     color: var(--secondary);
 }
 
+/* Content */
 .post-content {
     max-width: 800px;
     margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .post-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
     margin-bottom: var(--size-3);
 }
 
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--size-3) 0;
+}
+
+/* Posts list */
+.posts-list {
+    max-width: 800px;
+    margin: var(--size-4) auto;
+}
+
+.post-preview {
+    margin-bottom: var(--size-4);
+    padding-bottom: var(--size-3);
+    border-bottom: 1px solid var(--color-main-opacity);
+}
+
+.post-preview:last-child {
+    border-bottom: none;
+}
+
+.post-preview h2 {
+    margin-bottom: var(--size-1);
+}
+
+.post-preview h2 a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.post-preview h2 a:hover {
+    text-decoration: underline;
+}
+
+.post-preview p {
+    margin-bottom: var(--size-2);
+}
+
+/* Footer */
 .footer {
     margin-top: var(--size-6);
     padding-bottom: var(--size-4);
+    max-width: 1240px;
+    padding-left: 420px;
+    padding-right: 100px;
+    margin: var(--size-6) auto var(--size-4);
 }
 
 .footer a {
@@ -67,16 +125,6 @@ body {
 
 .footer a:hover {
     color: var(--primary);
-}
-
-@media (min-width: 768px) {
-    .navigation {
-        padding-top: var(--size-4);
-    }
-    
-    .post-content {
-        padding: 0;
-    }
 }
 
 /* Telegram integration */
@@ -111,4 +159,27 @@ body {
     margin-top: var(--size-5);
     padding-top: var(--size-4);
     border-top: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .main,
+    .navigation,
+    .footer {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main,
+    .navigation,
+    .footer {
+        padding-left: var(--size-2);
+        padding-right: var(--size-2);
+    }
+    
+    .post-content {
+        padding: 0;
+    }
 } 
