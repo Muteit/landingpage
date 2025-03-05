@@ -38,7 +38,7 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-      - name: Build with Hugo
+      - name: Build blog
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
@@ -50,11 +50,18 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/blog/"
       - name: Prepare deployment
         run: |
+          # Создаем директорию для публикации
+          mkdir -p public
           # Копируем основной сайт
-          cp -r public/* blog/blog-source/public/
-          # Перемещаем всё в корневую public директорию
-          rm -rf public
-          mv blog/blog-source/public ./public
+          cp index.html public/
+          cp -r assets public/
+          cp -r static public/
+          cp -r css public/ || true
+          cp -r js public/ || true
+          cp -r images public/ || true
+          # Копируем блог
+          mkdir -p public/blog
+          cp -r blog/blog-source/public/* public/blog/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

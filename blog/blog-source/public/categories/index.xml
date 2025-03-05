@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Categories on База знаний - MuteIt.ru</title><link>https://muteit.ru/blog/categories/</link><description>Recent content in Categories on База знаний - MuteIt.ru</description><generator>Hugo -- 0.144.0</generator><language>ru-ru</language><atom:link href="https://muteit.ru/blog/categories/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on База знаний - MuteIt.ru</title>
+    <link>http://localhost:55000/blog/categories/</link>
+    <description>Recent content in Categories on База знаний - MuteIt.ru</description>
+    <generator>Hugo -- 0.144.0</generator>
+    <language>ru-ru</language>
+    <atom:link href="http://localhost:55000/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
