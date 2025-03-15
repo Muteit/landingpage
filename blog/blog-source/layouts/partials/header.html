@@ -16,15 +16,31 @@
 {{- end }}
 {{- end }}
 
+{{- /* Header */ -}}
 <header class="header">
-    <nav class="navigation">
-        <a href="/">Проект</a>
-        <a href="/blog/">База знаний</a>
-        <a href="/start/">С чего начать</a>
-        <a href="/treatments/">Лечение</a>
-        <a href="/platform/">Платформа</a>
-    </nav>
+    <div class="nav-container">
+        <div class="logo">
+            <a href="https://muteit.ru/"><img src="/blog/assets/img/muteit-logo.svg" alt="Mute It Logo" width="40" height="40"></a>
+        </div>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="main-nav">
+            <a href="https://muteit.ru/">Главная</a>
+            <a href="https://muteit.ru/tips/">Советы</a>
+            <a href="https://muteit.ru/start/">С чего начать</a>
+            <a href="https://muteit.ru/treatments/">Помощь</a>
+            <a href="https://muteit.ru/stories/">Истории</a>
+            <a href="https://muteit.ru/blog/" class="active">База знаний</a>
+        </nav>
+        <div class="donation">
+            <a href="https://yoomoney.ru/fundraise/18ERQJPU5TH.250216" target="_blank" rel="noopener noreferrer">Поддержать проект</a>
+        </div>
+    </div>
 </header>
+{{- /* End Header */ -}}
 
 {{- /* Main Menu */ -}}
 {{- if (not .IsHome) }}
@@ -37,4 +53,10 @@
     </div>
     {{- end }}
 </header>
-{{- end }} 
+{{- end }}
+
+<script>
+document.querySelector('.burger').addEventListener('click', () => {
+  document.querySelector('.main-nav').classList.toggle('active');
+});
+</script> 

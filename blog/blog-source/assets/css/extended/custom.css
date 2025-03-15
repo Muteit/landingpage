@@ -78,30 +78,67 @@ h3 {
     }
 }
 
-/* Navigation */
-.top-navigation {
-    font-size: 1rem;
-    padding: var(--size-4) var(--size-2);
+/* Header and Navigation */
+.header {
+    padding: 0;
+    position: relative;
+}
+
+.nav-container {
     display: flex;
-    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px var(--size-2);
+    background: #000;
     max-width: 1040px;
     margin: 0 auto;
 }
 
 @media (min-width: 992px) {
-    .top-navigation {
+    .nav-container {
         padding-left: 100px;
         padding-right: 100px;
     }
 }
 
-.top-navigation a {
-    color: var(--color-main);
-    text-decoration: none;
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
 }
 
-.top-navigation a:hover {
-    color: var(--color-muted);
+.main-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: color 0.1s;
+}
+
+.main-nav a:hover {
+    color: #ddd;
+}
+
+.main-nav a.active {
+    color: #fff;
+    font-weight: 700;
+}
+
+.donation {
+    font-size: 1rem;
+    padding: 0;
+}
+
+.donation a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
 }
 
 /* Content */
@@ -181,73 +218,55 @@ h3 {
     color: var(--color-main);
 }
 
-/* Theme toggle */
-#theme-toggle {
-    color: var(--color-main);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-#theme-toggle svg {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-}
-
-/* Telegram integration */
-.telegram-share {
-    margin: var(--size-4) 0;
-    text-align: center;
-}
-
-.telegram-share-button {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--size-2);
-    padding: var(--size-2) var(--size-3);
-    color: var(--primary);
-    background-color: var(--tertiary);
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-}
-
-.telegram-share-button:hover {
-    background-color: var(--code-bg);
-}
-
-.telegram-share-button svg {
-    width: 20px;
-    height: 20px;
-}
-
-/* Comments section */
-.post-comments {
-    margin-top: var(--size-5);
-    padding-top: var(--size-4);
-    border-top: 1px solid var(--border);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .main,
-    .navigation,
-    .footer {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-}
-
+/* Mobile styles */
 @media (max-width: 768px) {
-    .main,
-    .navigation,
-    .footer {
-        padding-left: var(--size-2);
-        padding-right: var(--size-2);
+    .nav-container {
+        padding: 10px var(--size-2);
+        flex-wrap: wrap;
     }
-    
-    .post-content {
-        padding: 0;
+
+    .logo {
+        margin-left: 50px; /* Учитываем место под бургер-меню */
+    }
+
+    .main-nav {
+        display: none; /* Скрываем меню */
+    }
+
+    .main-nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+        order: 3;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .donation a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    /* Бургер-меню */
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        z-index: 10;
+    }
+
+    .burger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
     }
 } 

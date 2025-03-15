@@ -11,7 +11,7 @@
 <meta name="description" content="Статьи и материалы о парурезисе, его лечении и преодолении">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:55000/blog/">
-<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.85a0425df064ceecc6fd4fe9513309377c27eca9a7b1b3d34a91c14e2275a3fb.css" integrity="sha256-haBCXfBkzuzG/U/pUTMJN3wn7KmnsbPTSpHBTiJ1o/s=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.268b94e203a407dd4442d0251e86ee2a7c071def2c0c21f8f75b8d1acc10311e.css" integrity="sha256-JouU4gOkB91EQtAlHobuKnwHHe8sDCH491uNGswQMR4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:55000/blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:55000/blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:55000/blog/favicon-32x32.png">
@@ -50,16 +50,20 @@
     if (localStorage.getItem("dark") === "dark") {
         document.body.classList.add('dark');
     }
-</script>
-
-<header class="header">
-    <nav class="navigation">
-        <a href="/">Проект</a>
-        <a href="/blog/">База знаний</a>
-        <a href="/start/">С чего начать</a>
-        <a href="/treatments/">Лечение</a>
-        <a href="/platform/">Платформа</a>
-    </nav>
+</script><header class="header">
+    <div class="top-navigation">
+        <a href="https://muteit.ru" class="logo">
+            <img src="/blog/logo.svg" alt="MuteIt" width="32" height="32">
+        </a>
+        <nav class="nav">
+        </nav>
+        <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
 </header> <main class="main"> 
 <article class="first-entry home-info">
     <header class="entry-header">
