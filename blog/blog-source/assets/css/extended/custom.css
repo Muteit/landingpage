@@ -79,9 +79,11 @@ h3 {
 }
 
 /* Header and Navigation */
-.header {
-    padding: 0;
+.header-nav {
+    width: 100%;
+    background: #000;
     position: relative;
+    z-index: 100;
 }
 
 .nav-container {
@@ -89,7 +91,6 @@ h3 {
     justify-content: space-between;
     align-items: center;
     padding: 20px var(--size-2);
-    background: #000;
     margin: 0 auto;
 }
 
