@@ -608,6 +608,19 @@ h6 small {
 
 .burger {
   display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  z-index: 10;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
 }
 
 /* Адаптивность */
@@ -662,18 +675,5 @@ h6 small {
 
   .burger {
     display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    left: 20px;
-    z-index: 10;
-  }
-
-  .burger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 5px 0;
   }
 }
