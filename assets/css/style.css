@@ -551,6 +551,7 @@ h6 small {
   align-items: center;
   padding: 20px 0;
   background: #000;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -592,10 +593,31 @@ h6 small {
   text-decoration: none;
   color: #fff;
   margin-left: 20px;
+  transition: color 0.1s;
+}
+
+.donation a:hover {
+  color: #ddd;
 }
 
 .burger {
   display: none;
+}
+
+/* Адаптивность */
+@media (min-width: 992px) {
+  .nav-container {
+    max-width: 1240px;
+    padding-left: 420px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 /* Мобильные стили */
@@ -603,6 +625,10 @@ h6 small {
   .nav-container {
     padding: 10px 0;
     flex-wrap: wrap;
+  }
+
+  .logo {
+    margin-left: 50px;
   }
 
   .main-nav {
@@ -628,13 +654,12 @@ h6 small {
     font-size: 14px;
   }
 
-  /* Бургер-меню */
   .burger {
     display: block;
     cursor: pointer;
     position: absolute;
     top: 25px;
-    right: 20px;
+    left: 20px;
     z-index: 10;
   }
 

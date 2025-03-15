@@ -90,14 +90,21 @@ h3 {
     align-items: center;
     padding: 20px var(--size-2);
     background: #000;
-    max-width: 1040px;
     margin: 0 auto;
 }
 
 @media (min-width: 992px) {
     .nav-container {
-        padding-left: 100px;
+        max-width: 1240px;
+        padding-left: 420px;
         padding-right: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .nav-container {
+        padding-left: 32px;
+        padding-right: 32px;
     }
 }
 
@@ -139,6 +146,11 @@ h3 {
     text-decoration: none;
     color: #fff;
     margin-left: 20px;
+    transition: color 0.1s;
+}
+
+.donation a:hover {
+    color: #ddd;
 }
 
 /* Content */
@@ -226,7 +238,7 @@ h3 {
     }
 
     .logo {
-        margin-left: 0; /* Убираем отступ слева */
+        margin-left: 50px; /* Учитываем место под бургер-меню */
     }
 
     .main-nav {
@@ -258,7 +270,7 @@ h3 {
         cursor: pointer;
         position: absolute;
         top: 25px;
-        right: 20px; /* Меняем left на right */
+        left: 20px; /* Меняем right на left */
         z-index: 10;
     }
 
