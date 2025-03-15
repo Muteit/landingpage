@@ -20,7 +20,7 @@ theme = 'PaperMod'
 
 [[params.socialIcons]]
   name = "telegram"
-  url = "https://t.me/muteit"
+  url = "https://t.me/muteitapp"
 
 [markup.goldmark.renderer]
   unsafe = true
