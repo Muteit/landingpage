@@ -92,11 +92,12 @@ h3 {
     align-items: center;
     padding: 20px var(--size-2);
     margin: 0 auto;
+    max-width: 1240px;
+    width: 100%;
 }
 
 @media (min-width: 992px) {
     .nav-container {
-        max-width: 1240px;
         padding-left: 420px;
         padding-right: 100px;
     }
@@ -119,6 +120,7 @@ h3 {
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-left: auto;
 }
 
 .main-nav a {
@@ -136,6 +138,16 @@ h3 {
 .main-nav a.active {
     color: #fff;
     font-weight: 700;
+}
+
+.main-nav a.donate-link {
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.main-nav a.donate-link:hover {
+    color: #ddd;
 }
 
 .donation {
@@ -262,6 +274,7 @@ h3 {
 
     .main-nav {
         display: none; /* Скрываем меню */
+        margin-left: 0;
     }
 
     .main-nav.active {
@@ -278,9 +291,11 @@ h3 {
         padding: 10px 0;
     }
 
-    .donation a {
-        margin-left: 10px;
-        font-size: 14px;
+    .main-nav a.donate-link {
+        margin-left: 0;
+        margin-top: 10px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .burger {
