@@ -13,6 +13,28 @@
 
 <div class="container">
   <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="/"><img src="assets/img/muteit-logo.svg" alt="Mute It Logo" width="40" height="40"></a>
+      </div>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="main-nav">
+        <a href="/" class="active">Главная</a>
+        <a href="/tips/">Советы</a>
+        <a href="/start/">С чего начать</a>
+        <a href="/treatments/">Помощь</a>
+        <a href="/stories/">Истории</a>
+        <a href="/blog/">База знаний</a>
+      </nav>
+      <div class="donation">
+        <a href="https://yoomoney.ru/fundraise/18ERQJPU5TH.250216" target="_blank" rel="noopener noreferrer">Поддержать проект</a>
+      </div>
+    </div>
+
     <div class="tap">
       <div class="tap-tube">
         <img src="assets/img/tap.svg" alt="">
@@ -26,12 +48,6 @@
       <div class="tap-stream">
         <img src="assets/img/stream.png" alt="">
       </div>
-    </div>
-
-  
-    <div class="navigation">
-      <a href="https://yoomoney.ru/fundraise/18ERQJPU5TH.250216" target="_blank" rel="noopener noreferrer">Поддержать проект</a>
-      <a href="/blog">С чего начать</a>
     </div>
 
     <div class="header-content">
@@ -247,7 +263,15 @@
 
 <audio id="audio" src="assets/audio/watertap.mp3" loop></audio>
 
-<script src="assets/js/main.js" async></script>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+<script>
+  document.querySelector('.burger').addEventListener('click', function() {
+    document.querySelector('.main-nav').classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>

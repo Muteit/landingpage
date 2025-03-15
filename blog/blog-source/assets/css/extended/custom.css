@@ -226,7 +226,7 @@ h3 {
     }
 
     .logo {
-        margin-left: 50px; /* Учитываем место под бургер-меню */
+        margin-left: 0; /* Убираем отступ слева */
     }
 
     .main-nav {
@@ -258,7 +258,7 @@ h3 {
         cursor: pointer;
         position: absolute;
         top: 25px;
-        left: 20px;
+        right: 20px; /* Меняем left на right */
         z-index: 10;
     }
 
